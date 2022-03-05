@@ -11,7 +11,7 @@ let statement=true;
    }
        else{
         let newRequest = new XMLHttpRequest()
-        newRequest.open('GET', 'https://www.random.org/integers/?num=1&min=0&max=255&col=1&base=10&format=plain&rnd=new', false)
+        newRequest.open('POST', 'https://www.random.org/integers/?num=1&min=0&max=255&col=1&base=10&format=plain&rnd=new', false)
         newRequest.send();
         const requestNumber= +(newRequest.responseText)
         let binary= requestNumber.toString(2)
@@ -32,5 +32,5 @@ let statement=true;
     }     
        }
     statement=!statement   
-   },1000)
+   },500)
 
